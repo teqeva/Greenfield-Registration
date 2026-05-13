@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenfield Institute | Premier Educational Institution</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Animated Background Canvas -->
+    <canvas id="particleCanvas"></canvas>
+    
+    <!-- Animated Gradient Orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-wrapper">
+                <div class="logo-icon">
+                    <div class="logo-shield"></div>
+                    <div class="logo-text">
+                        <span class="logo-text-main">GREENFIELD</span>
+                        <span class="logo-text-sub">INSTITUTE</span>
+                    </div>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Motion Graphics -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge animate-slide-down">
+                    <span class="badge-dot"></span>
+                    Since 2010
+                </div>
+                <h1 class="animate-slide-up">
+                    Shape Your Future at 
+                    <span class="gradient-text">Greenfield</span>
+                </h1>
+                <div class="hero-stats animate-slide-up delay-1">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="5000">0</span>
+                        <span class="stat-label">Students</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="200">0</span>
+                        <span class="stat-label">Faculty</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="50">0</span>
+                        <span class="stat-label">Programs</span>
+                    </div>
+                </div>
+                <p class="animate-slide-up delay-2">
+                    Join a community of innovators, creators, and leaders. Access world-class education, 
+                    flexible learning options, and career-focused programs designed for tomorrow's challenges.
+                </p>
+                <div class="hero-buttons animate-slide-up delay-3">
+                    <a href="register.html" class="btn btn-primary btn-glow">
+                        <i class="fas fa-arrow-right"></i>
+                        Get Started
+                    </a>
+                    <a href="courses.html" class="btn btn-outline">
+                        <i class="fas fa-play-circle"></i>
+                        Explore Courses
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual animate-slide-right">
+                <div class="floating-card card-1">
+                    <i class="fas fa-chalkboard-user"></i>
+                    <div class="card-content">
+                        <h4>Expert Faculty</h4>
+                        <p>Learn from industry leaders</p>
+                    </div>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fas fa-laptop-code"></i>
+                    <div class="card-content">
+                        <h4>Modern Curriculum</h4>
+                        <p>Industry-aligned courses</p>
+                    </div>
+                </div>
+                <div class="floating-card card-3">
+                    <i class="fas fa-globe"></i>
+                    <div class="card-content">
+                        <h4>Global Recognition</h4>
+                        <p>Certificates worldwide</p>
+                    </div>
+                </div>
+                <div class="floating-card card-4">
+                    <i class="fas fa-clock"></i>
+                    <div class="card-content">
+                        <h4>Flexible Learning</h4>
+                        <p>Online & on-campus</p>
+                    </div>
+                </div>
+                <div class="hero-glow-effect"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section with 3D Flip Cards -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Why Choose Us</span>
+                <h2>Everything You Need to Succeed</h2>
+                <p>We provide the tools, resources, and support to help you achieve your academic goals.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card-3d">
+                    <div class="feature-front">
+                        <div class="feature-icon">
+                            <i class="fas fa-chalkboard-user"></i>
+                        </div>
+                        <h3>Expert Faculty</h3>
+                        <p>Learn from industry professionals with years of experience.</p>
+                    </div>
+                    <div class="feature-back">
+                        <i class="fas fa-chalkboard-user"></i>
+                        <h3>Expert Faculty</h3>
+                        <p>200+ experienced instructors from top companies like Google, Microsoft, and Amazon.</p>
+                        <span class="feature-link">Learn More →</span>
+                    </div>
+                </div>
+                <div class="feature-card-3d">
+                    <div class="feature-front">
+                        <div class="feature-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Modern Curriculum</h3>
+                        <p>Stay ahead with up-to-date courses for current industry demands.</p>
+                    </div>
+                    <div class="feature-back">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Modern Curriculum</h3>
+                        <p>AI, ML, Cloud Computing, and more. Updated every semester with industry input.</p>
+                        <span class="feature-link">Learn More →</span>
+                    </div>
+                </div>
+                <div class="feature-card-3d">
+                    <div class="feature-front">
+                        <div class="feature-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>Global Recognition</h3>
+                        <p>Our certificates are recognized by leading companies worldwide.</p>
+                    </div>
+                    <div class="feature-back">
+                        <i class="fas fa-globe"></i>
+                        <h3>Global Recognition</h3>
+                        <p>Accredited by international bodies. Accepted in 50+ countries globally.</p>
+                        <span class="feature-link">Learn More →</span>
+                    </div>
+                </div>
+                <div class="feature-card-3d">
+                    <div class="feature-front">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Flexible Learning</h3>
+                        <p>Choose from full-time, part-time, or online learning options.</p>
+                    </div>
+                    <div class="feature-back">
+                        <i class="fas fa-clock"></i>
+                        <h3>Flexible Learning</h3>
+                        <p>Study at your own pace with 24/7 access to course materials and recordings.</p>
+                        <span class="feature-link">Learn More →</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section with Progress Bars -->
+    <section class="stats-showcase">
+        <div class="container">
+            <div class="stats-wrapper">
+                <div class="stats-left">
+                    <span class="section-tag">Our Impact</span>
+                    <h2>By the Numbers</h2>
+                    <p>Greenfield Institute has been transforming lives and careers since 2010. Here's what we've achieved together.</p>
+                    <div class="impact-stats">
+                        <div class="impact-item">
+                            <div class="impact-number" data-target="95">0</div>
+                            <div class="impact-label">Graduation Rate</div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-number" data-target="500">0</div>
+                            <div class="impact-label">Partner Companies</div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-number" data-target="30">0</div>
+                            <div class="impact-label">Countries</div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-number" data-target="150">0</div>
+                            <div class="impact-label">Industry Awards</div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stats-right">
+                    <div class="stats-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div class="stats-card-content">
+                            <h4>Alumni Success</h4>
+                            <p>85% of our graduates find employment within 6 months of graduation</p>
+                        </div>
+                    </div>
+                    <div class="stats-card">
+                        <i class="fas fa-chart-line"></i>
+                        <div class="stats-card-content">
+                            <h4>Salary Increase</h4>
+                            <p>Average 45% salary increase after completing our programs</p>
+                        </div>
+                    </div>
+                    <div class="stats-card">
+                        <i class="fas fa-heart"></i>
+                        <div class="stats-card-content">
+                            <h4>Student Satisfaction</h4>
+                            <p>94% would recommend Greenfield to friends and family</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Courses Carousel -->
+    <section class="popular-courses">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Featured Programs</span>
+                <h2>Most Popular Courses</h2>
+                <p>Discover the courses that students are loving this semester.</p>
+            </div>
+            <div class="courses-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-track" id="carouselTrack">
+                        <div class="carousel-card">
+                            <div class="carousel-card-inner">
+                                <div class="carousel-front">
+                                    <span class="course-badge">Most Popular</span>
+                                    <h3>Data Structures & Algorithms</h3>
+                                    <p>Master efficient programming and problem-solving techniques.</p>
+                                    <div class="course-meta">
+                                        <span><i class="fas fa-user"></i> Dr. James Wilson</span>
+                                        <span><i class="fas fa-clock"></i> 12 weeks</span>
+                                    </div>
+                                </div>
+                                <div class="carousel-back">
+                                    <i class="fas fa-code"></i>
+                                    <h3>CS301</h3>
+                                    <p>4 Credits | Advanced Level</p>
+                                    <button class="btn btn-sm btn-primary">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-card">
+                            <div class="carousel-card-inner">
+                                <div class="carousel-front">
+                                    <span class="course-badge">Trending</span>
+                                    <h3>Data Science & Analytics</h3>
+                                    <p>Extract insights from data using Python and machine learning.</p>
+                                    <div class="course-meta">
+                                        <span><i class="fas fa-user"></i> Prof. Angela Davis</span>
+                                        <span><i class="fas fa-clock"></i> 14 weeks</span>
+                                    </div>
+                                </div>
+                                <div class="carousel-back">
+                                    <i class="fas fa-chart-line"></i>
+                                    <h3>DS201</h3>
+                                    <p>4 Credits | Intermediate Level</p>
+                                    <button class="btn btn-sm btn-primary">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-card">
+                            <div class="carousel-card-inner">
+                                <div class="carousel-front">
+                                    <span class="course-badge">New</span>
+                                    <h3>Full Stack Web Development</h3>
+                                    <p>Build modern web apps with React, Node.js, and MongoDB.</p>
+                                    <div class="course-meta">
+                                        <span><i class="fas fa-user"></i> Prof. Michael Brown</span>
+                                        <span><i class="fas fa-clock"></i> 16 weeks</span>
+                                    </div>
+                                </div>
+                                <div class="carousel-back">
+                                    <i class="fas fa-globe"></i>
+                                    <h3>CS402</h3>
+                                    <p>3 Credits | Intermediate Level</p>
+                                    <button class="btn btn-sm btn-primary">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-card">
+                            <div class="carousel-card-inner">
+                                <div class="carousel-front">
+                                    <span class="course-badge">Popular</span>
+                                    <h3>Cybersecurity Fundamentals</h3>
+                                    <p>Learn to protect systems from cyber threats and attacks.</p>
+                                    <div class="course-meta">
+                                        <span><i class="fas fa-user"></i> Dr. Kevin Mitnick</span>
+                                        <span><i class="fas fa-clock"></i> 10 weeks</span>
+                                    </div>
+                                </div>
+                                <div class="carousel-back">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <h3>SEC101</h3>
+                                    <p>3 Credits | Beginner Level</p>
+                                    <button class="btn btn-sm btn-primary">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-card">
+                            <div class="carousel-card-inner">
+                                <div class="carousel-front">
+                                    <span class="course-badge">Featured</span>
+                                    <h3>Artificial Intelligence</h3>
+                                    <p>Explore AI concepts including search algorithms and intelligent agents.</p>
+                                    <div class="course-meta">
+                                        <span><i class="fas fa-user"></i> Prof. Stuart Russell</span>
+                                        <span><i class="fas fa-clock"></i> 12 weeks</span>
+                                    </div>
+                                </div>
+                                <div class="carousel-back">
+                                    <i class="fas fa-robot"></i>
+                                    <h3>AI101</h3>
+                                    <p>3 Credits | Beginner Level</p>
+                                    <button class="btn btn-sm btn-primary">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn prev" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-btn next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="view-all">
+                <a href="courses.html" class="btn btn-secondary">View All Courses <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section with Animated Cards -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Testimonials</span>
+                <h2>What Our Students Say</h2>
+                <p>Hear from students who have transformed their careers with us.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>The course registration system is incredibly easy to use. Greenfield Institute has transformed my learning experience. The faculty is always available to help.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <span>SJ</span>
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <span>Computer Science, 2024</span>
+                            <div class="author-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>Excellent faculty and well-structured courses. The dashboard makes tracking my progress simple and intuitive. Best decision I ever made for my career.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <span>MC</span>
+                        </div>
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <span>Data Science, 2025</span>
+                            <div class="author-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>The support system here is outstanding. The community is incredibly welcoming and the career guidance helped me land my dream job at a top tech company.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <span>PP</span>
+                        </div>
+                        <div class="author-info">
+                            <h4>Priya Patel</h4>
+                            <span>Business Analytics, 2024</span>
+                            <div class="author-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section with Parallax Effect -->
+    <section class="cta-section">
+        <div class="cta-overlay"></div>
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Journey?</h2>
+                <p>Join thousands of students who have chosen Greenfield Institute for their education. Your future starts here.</p>
+                <div class="cta-buttons">
+                    <a href="register.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-arrow-right"></i>
+                        Apply Now
+                    </a>
+                    <a href="courses.html" class="btn btn-outline btn-large">
+                        <i class="fas fa-download"></i>
+                        Download Brochure
+                    </a>
+                </div>
+                <div class="cta-features">
+                    <span><i class="fas fa-check-circle"></i> No Application Fee</span>
+                    <span><i class="fas fa-check-circle"></i> Scholarship Available</span>
+                    <span><i class="fas fa-check-circle"></i> Easy Payment Plans</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <div class="logo-icon small">
+                        <div class="logo-shield"></div>
+                        <div class="logo-text">
+                            <span class="logo-text-main">GREENFIELD</span>
+                            <span class="logo-text-sub">INSTITUTE</span>
+                        </div>
+                    </div>
+                </div>
+                <p>Empowering futures through quality education since 2010. Join us and become part of a global community of learners.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Student Portal</a></li>
+                    <li><a href="#">Academic Calendar</a></li>
+                    <li><a href="#">Scholarships</a></li>
+                    <li><a href="#">Career Services</a></li>
+                    <li><a href="#">Alumni Network</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Education Avenue, Knowledge City</li>
+                    <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                    <li><i class="fas fa-envelope"></i> info@greenfield.edu</li>
+                    <li><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Greenfield Institute. All rights reserved. | Privacy Policy | Terms of Service</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/index-animations.js"></script>
+</body>
+</html>

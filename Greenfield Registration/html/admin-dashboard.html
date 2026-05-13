@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Greenfield Institute</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/admin-dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Greenfield<span>Institute</span></a>
+            <ul class="nav-links">
+                <li><a href="admin-dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="admin-manage-courses.html">Manage Courses</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="admin-header"><h1>Admin Dashboard</h1><div class="admin-actions"><button class="btn btn-secondary" onclick="showToast('Report export started', 'info')"><i class="fas fa-download"></i> Export Report</button></div></div>
+
+            <div class="stats-grid">
+                <div class="stat-card"><div class="stat-number" id="total-students">0</div><div class="stat-label">Total Students</div><div class="stat-trend up">↑ +12% this semester</div></div>
+                <div class="stat-card"><div class="stat-number" id="total-courses">0</div><div class="stat-label">Active Courses</div><div class="stat-trend up">↑ +5 new courses</div></div>
+                <div class="stat-card"><div class="stat-number" id="total-registrations">0</div><div class="stat-label">Total Registrations</div><div class="stat-trend up">↑ +8% growth</div></div>
+                <div class="stat-card"><div class="stat-number" id="total-revenue">$0</div><div class="stat-label">Revenue</div><div class="stat-trend up">↑ +15% target</div></div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+                <div class="chart-container"><h3 class="chart-title">Enrollment Trends</h3><div id="enrollment-chart"></div></div>
+                <div class="chart-container"><h3 class="chart-title">Course Distribution</h3><div id="course-distribution" class="distribution-list"></div></div>
+            </div>
+
+            <div style="margin-bottom: 2rem;"><h2>Recent Registrations</h2><div class="table-container"><table class="data-table"><thead><tr><th>Student ID</th><th>Name</th><th>Course</th><th>Status</th></tr></thead><tbody id="recent-registrations"></tbody></table></div></div>
+
+            <div><h2>Quick Actions</h2><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;"><a href="admin-manage-courses.html" class="quick-action-card"><i class="fas fa-plus-circle"></i><h3>Add Course</h3><p>Create new course offering</p></a><a href="#" class="quick-action-card" onclick="quickAction('manage-students')"><i class="fas fa-user-graduate"></i><h3>Manage Students</h3><p>View and edit student records</p></a><a href="#" class="quick-action-card" onclick="quickAction('reports')"><i class="fas fa-chart-line"></i><h3>Generate Reports</h3><p>View analytics and insights</p></a></div></div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section"><h3>Greenfield Institute</h3><p>Admin Portal - Course Registration System</p></div>
+            <div class="footer-section"><h3>Quick Links</h3><ul><li><a href="admin-dashboard.html">Dashboard</a></li><li><a href="admin-manage-courses.html">Manage Courses</a></li></ul></div>
+            <div class="footer-section"><h3>Support</h3><ul><li><i class="fas fa-envelope"></i> admin@greenfield.edu</li><li><i class="fas fa-phone"></i> +1 234 567 8901</li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2024 Greenfield Institute. All rights reserved.</p></div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Greenfield Institute</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Greenfield<span>Institute</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="login.html" class="active">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="form-container">
+                <h2>Welcome Back</h2>
+                <p>Login to access your dashboard</p>
+
+                <div class="tabs">
+                    <button class="tab-btn active" onclick="switchTab('student')">Student Login</button>
+                    <button class="tab-btn" onclick="switchTab('admin')">Admin Login</button>
+                </div>
+
+                <div id="student-tab" class="tab-content active">
+                    <form id="student-login-form" onsubmit="return handleStudentLogin(event)">
+                        <div class="form-group">
+                            <label for="student-email">Email Address</label>
+                            <input type="email" id="student-email" required placeholder="student@greenfield.edu">
+                        </div>
+                        <div class="form-group">
+                            <label for="student-password">Password</label>
+                            <input type="password" id="student-password" required placeholder="Enter your password">
+                        </div>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox"> Remember me</label>
+                            <a href="#" class="forgot-link">Forgot Password?</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Login as Student</button>
+                        <div class="register-link">Don't have an account? <a href="register.html">Register here</a></div>
+                    </form>
+                </div>
+
+                <div id="admin-tab" class="tab-content">
+                    <form id="admin-login-form" onsubmit="return handleAdminLogin(event)">
+                        <div class="form-group">
+                            <label for="admin-email">Admin Email</label>
+                            <input type="email" id="admin-email" required placeholder="admin@greenfield.edu">
+                        </div>
+                        <div class="form-group">
+                            <label for="admin-password">Password</label>
+                            <input type="password" id="admin-password" required placeholder="Enter admin password">
+                        </div>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox"> Remember me</label>
+                            <a href="#" class="forgot-link">Contact IT Support</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Login as Admin</button>
+                    </form>
+                </div>
+
+                <div id="error-message" class="alert alert-error" style="display: none;"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section"><h3>Greenfield Institute</h3><p>Empowering futures through quality education.</p></div>
+            <div class="footer-section"><h3>Support</h3><ul><li><a href="#">Help Center</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Use</a></li></ul></div>
+            <div class="footer-section"><h3>Contact</h3><ul><li><i class="fas fa-phone"></i> +1 234 567 8900</li><li><i class="fas fa-envelope"></i> support@greenfield.edu</li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2024 Greenfield Institute. All rights reserved.</p></div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        function switchTab(role) {
+            const studentTab = document.getElementById('student-tab');
+            const adminTab = document.getElementById('admin-tab');
+            const tabs = document.querySelectorAll('.tab-btn');
+            if (role === 'student') {
+                studentTab.classList.add('active');
+                adminTab.classList.remove('active');
+                tabs[0].classList.add('active');
+                tabs[1].classList.remove('active');
+            } else {
+                studentTab.classList.remove('active');
+                adminTab.classList.add('active');
+                tabs[0].classList.remove('active');
+                tabs[1].classList.add('active');
+            }
+        }
+        
+        function handleStudentLogin(event) {
+            event.preventDefault();
+            const email = document.getElementById('student-email').value;
+            const password = document.getElementById('student-password').value;
+            const errorDiv = document.getElementById('error-message');
+            const students = JSON.parse(localStorage.getItem('students')) || [];
+            const student = students.find(s => s.email === email);
+            
+            if (student && password === 'password123') {
+                showToast('Login successful! Redirecting...', 'success');
+                setTimeout(() => window.location.href = 'student-dashboard.html', 1000);
+            } else {
+                errorDiv.style.display = 'block';
+                errorDiv.innerHTML = '✗ Invalid email or password. Demo password: password123';
+                setTimeout(() => errorDiv.style.display = 'none', 3000);
+            }
+            return false;
+        }
+        
+        function handleAdminLogin(event) {
+            event.preventDefault();
+            const email = document.getElementById('admin-email').value;
+            const password = document.getElementById('admin-password').value;
+            const errorDiv = document.getElementById('error-message');
+            
+            if (email === 'admin@greenfield.edu' && password === 'admin123') {
+                showToast('Admin login successful!', 'success');
+                setTimeout(() => window.location.href = 'admin-dashboard.html', 1000);
+            } else {
+                errorDiv.style.display = 'block';
+                errorDiv.innerHTML = '✗ Invalid credentials. Demo: admin@greenfield.edu / admin123';
+                setTimeout(() => errorDiv.style.display = 'none', 3000);
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>

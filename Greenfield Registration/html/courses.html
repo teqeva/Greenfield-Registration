@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Catalog - Greenfield Institute</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/courses.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                Greenfield<span>Institute</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html" class="active">Courses</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1>Course Catalog</h1>
+                <p>Explore our comprehensive range of programs across multiple departments</p>
+            </div>
+
+            <!-- Search Section -->
+            <div class="search-section">
+                <div class="search-container">
+                    <div class="search-main">
+                        <div class="search-wrapper">
+                            <i class="fas fa-search search-icon"></i>
+                            <input type="text" id="searchInput" placeholder="Search for courses, departments, or instructors...">
+                            <button class="clear-search" id="clearSearch">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="filter-row">
+                        <div class="filter-group">
+                            <select id="levelFilter" class="filter-select">
+                                <option value="all">All Levels</option>
+                                <option value="beginner">Beginner</option>
+                                <option value="intermediate">Intermediate</option>
+                                <option value="advanced">Advanced</option>
+                            </select>
+                            <select id="creditFilter" class="filter-select">
+                                <option value="all">All Credits</option>
+                                <option value="2">2 Credits</option>
+                                <option value="3">3 Credits</option>
+                                <option value="4">4 Credits</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="active-filters" id="activeFilters"></div>
+                </div>
+            </div>
+
+            <!-- Department Navigation Tabs -->
+            <div class="dept-tabs">
+                <button class="dept-tab active" data-dept="all">All Departments</button>
+                <button class="dept-tab" data-dept="cs">Computer Science</button>
+                <button class="dept-tab" data-dept="ds">Data Science</button>
+                <button class="dept-tab" data-dept="it">Information Technology</button>
+                <button class="dept-tab" data-dept="ba">Business Analytics</button>
+                <button class="dept-tab" data-dept="cyber">Cybersecurity</button>
+                <button class="dept-tab" data-dept="ai">Artificial Intelligence</button>
+            </div>
+
+            <!-- Results Stats -->
+            <div class="results-stats">
+                <div class="course-count">
+                    Showing <strong id="visibleCount">0</strong> courses
+                </div>
+            </div>
+
+            <!-- Courses Grid -->
+            <div id="courses-container" class="courses-grid"></div>
+        </div>
+    </main>
+
+    <!-- Course Detail Modal -->
+    <div id="courseDetailModal" class="modal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h3 id="modalCourseTitle">Course Details</h3>
+                <button class="close-modal" onclick="closeModal('courseDetailModal')">&times;</button>
+            </div>
+            <div class="modal-body" id="course-detail-content"></div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="modalEnrollBtn" onclick="enrollFromModal()">Enroll Now</button>
+                <button class="btn btn-outline" onclick="closeModal('courseDetailModal')">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Greenfield Institute</h3>
+                <p>Empowering futures through quality education since 2010.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> registrar@greenfield.edu</li>
+                    <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Greenfield Institute. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/courses.js"></script>
+</body>
+</html>

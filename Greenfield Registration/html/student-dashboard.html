@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Greenfield Institute</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/student-dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Greenfield<span>Institute</span></a>
+            <ul class="nav-links">
+                <li><a href="student-dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="courses.html">Browse Courses</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="welcome-banner">
+                <div>
+                    <h1>Welcome back, <span id="student-name">Student</span>!</h1>
+                    <p>Spring Semester 2024 is in full swing. Keep up the great work!</p>
+                    <div class="student-badge"><i class="fas fa-id-card"></i> ID: <span id="student-id">-</span> | <i class="fas fa-envelope"></i> <span id="student-email">-</span></div>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card"><div class="stat-icon"><i class="fas fa-book"></i></div><div class="stat-info"><div class="stat-number" id="courses-count">0</div><div class="stat-label">Enrolled Courses</div></div></div>
+                <div class="stat-card"><div class="stat-icon"><i class="fas fa-star"></i></div><div class="stat-info"><div class="stat-number" id="credits-count">0</div><div class="stat-label">Total Credits</div></div></div>
+                <div class="stat-card"><div class="stat-icon"><i class="fas fa-chart-line"></i></div><div class="stat-info"><div class="stat-number" id="completion-rate">0%</div><div class="stat-label">Completion Rate</div></div></div>
+                <div class="stat-card"><div class="stat-icon"><i class="fas fa-trophy"></i></div><div class="stat-info"><div class="stat-number" id="gpa-value">0.0</div><div class="stat-label">Current GPA</div></div></div>
+            </div>
+
+            <div class="quick-actions">
+                <button onclick="location.href='courses.html'" class="btn btn-primary"><i class="fas fa-plus"></i> Register for Courses</button>
+                <button onclick="showToast('Schedule download started', 'success')" class="btn btn-secondary"><i class="fas fa-download"></i> Download Schedule</button>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                <div><h2>My Current Courses</h2><div id="enrolled-courses-container"></div></div>
+                <div><h2>Today's Schedule</h2><div class="card" id="today-schedule"></div><h2 style="margin-top: 2rem;">Upcoming Assignments</h2><div id="upcoming-assignments"></div></div>
+            </div>
+
+            <div style="margin-top: 2rem;"><h2>Announcements</h2><div id="announcements-container"></div></div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section"><h3>Greenfield Institute</h3><p>Empowering futures through quality education.</p></div>
+            <div class="footer-section"><h3>Support</h3><ul><li><a href="#">Help Desk</a></li><li><a href="#">Academic Calendar</a></li></ul></div>
+            <div class="footer-section"><h3>Contact</h3><ul><li><i class="fas fa-phone"></i> +1 234 567 8900</li><li><i class="fas fa-envelope"></i> support@greenfield.edu</li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2024 Greenfield Institute. All rights reserved.</p></div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>
